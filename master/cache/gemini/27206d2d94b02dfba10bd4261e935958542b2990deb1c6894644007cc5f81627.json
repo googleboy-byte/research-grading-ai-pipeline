@@ -1,0 +1,5 @@
+{
+  "text": "In these situations, it is necessary to \ncomplement it with a rule-based module to have a very high task success rate\n\nThe main limitation of these experiments is that hybrid AI strategies have been u...",
+  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
+  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"Reinforcement learning (RL)\",\n        \"PPO algorithm\",\n        \"Simulated environments\",\n        \"Evaluation metrics (quality and time-processing)\"\n    ],\n    \"data_collection\": \"Data was generated through simulated episodes in various scenarios.\",\n    \"analysis_techniques\": [\n        \"Evaluation of task success rate\",\n        \"Analysis of obstacle collisions\",\n        \"Time-processing analysis (number of cycles/steps)\"\n    ]\n}"
+}

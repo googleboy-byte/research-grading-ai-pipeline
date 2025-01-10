@@ -1,0 +1,5 @@
+{
+  "text": "These approaches utilize no pixel-level human annotations and only image-\nlevel captions from noisy internet-scale datasets (same data used to train CLIP [42])\nOur proposed Seg-TTO achieves state-of-t...",
+  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
+  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"Test-time optimization (TTO)\",\n        \"Self-supervised learning\",\n        \"Prompt tuning\",\n        \"Feature selection\",\n        \"Visual feature aggregation\",\n        \"Textual feature tuning\",\n        \"Category attribute aggregation\"\n    ],\n    \"data_collection\": \"The paper does not mention how the data was collected or generated.\",\n    \"analysis_techniques\": [\n        \"Entropy minimization\",\n        \"Cross entropy\",\n        \"Pseudo-labeling\"\n    ]\n}"
+}

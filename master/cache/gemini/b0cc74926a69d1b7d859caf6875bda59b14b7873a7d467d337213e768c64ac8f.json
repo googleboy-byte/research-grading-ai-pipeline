@@ -1,0 +1,5 @@
+{
+  "text": "\u2022 Using neural networks enable greater flexibility and can integrate with a wide range of iterative\noptimization algorithms. For instance, although the above formulation of the unrolled network\nfollow...",
+  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
+  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": \"\u2022 Projected Gradient Descent\\n\u2022 Alternating Direction Method of Multipliers (ADMM-Net)\\n\u2022 Iterative Soft-Thresholding Algorithm (ISTA-Net)\\n\u2022 Nesterov\u2019s Accelerated First Order Method\\n\u2022 Approximate Message Passing (AMP-Net)\",\n    \"data_collection\": \"Our dataset is generated from the 50K validation images from the 2012 ImageNet Large Scale Visual\\nRecognition Challenge (ILSVRC2012).\",\n    \"analysis_techniques\": \"\u2022 Mean-squared-error\"\n}"
+}

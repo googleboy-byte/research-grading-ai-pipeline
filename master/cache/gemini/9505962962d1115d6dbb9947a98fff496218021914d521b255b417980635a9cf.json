@@ -1,0 +1,5 @@
+{
+  "text": "AI-Driven Personalization in Online Education\nPlatforms: Harnessing the Power of Artificial\nIntelligence to Revolutionize Learning Experiences\nAbstract\nAI-driven personalization is revolutionizing onl...",
+  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
+  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"Machine learning techniques\",\n        \"Neural network architecture\",\n        \"Surrealistic art generation\",\n        \"Philosophical resonance\",\n        \"Daydreaming module\",\n        \"Performance artists' collaboration\",\n        \"Immersive, virtual reality-based interface\"\n    ],\n    \"data_collection\": \"Collection of a vast dataset comprising student demographics, learning patterns, and performance metrics\",\n    \"analysis_techniques\": \"Not explicitly mentioned\"\n}"
+}

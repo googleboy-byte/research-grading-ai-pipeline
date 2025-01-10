@@ -1,0 +1,5 @@
+{
+  "text": "We adapt the methods developed for segmented video classification to continuous videos by imple-\nmenting a temporal sliding window approach. We select a fixed window duration of L features, apply\nmax-...",
+  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
+  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"Temporal sliding window approach\",\n        \"Max-pooling\",\n        \"Temporal pyramid pooling\",\n        \"Temporal convolutional models\",\n        \"Sub-event model\",\n        \"Super-event model\",\n        \"Per-frame CNN\",\n        \"Per-segment CNN\",\n        \"Bi-directional LSTM\",\n        \"Fully-connected layer\"\n    ],\n    \"data_collection\": \"The MLB-YouTube dataset was created by extracting densely annotated frames of activities from broadcast baseball videos.\",\n    \"analysis_techniques\": [\n        \"Multi-label classification\",\n        \"Binary cross-entropy\"\n    ]\n}"
+}

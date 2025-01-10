@@ -1,0 +1,5 @@
+{
+  "text": "We adapt the methods developed for segmented video classification to continuous videos by imple-\nmenting a temporal sliding window approach. We select a fixed window duration of L features, apply\nmax-...",
+  "prompt": "You are a research paper analyzer. Analyze this research paper and extract key information. If you can't find certain information, focus on what you can find in the text.\n\nReturn your analysis in this...",
+  "response": "{\n    \"main_topic\": \"Activity recognition in baseball videos\",\n    \"objective\": \"To evaluate different methods for recognizing activities in baseball videos, focusing on how they capture the temporal organization of activities.\",\n    \"methodology\": \"The study compares various methods for temporal feature aggregation, both for classifying activities in segmented videos and for detecting them in continuous video streams.\",\n    \"key_findings\": \"The findings indicate that incorporating temporal dynamics into models is beneficial for detailed activity recognition.\"\n}"
+}

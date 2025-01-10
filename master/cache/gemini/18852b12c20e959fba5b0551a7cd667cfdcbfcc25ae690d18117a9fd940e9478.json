@@ -1,0 +1,5 @@
+{
+  "text": "For instance, the standard SGC cannot execute forward\npropagation on Penn94 without preprocessing since Penn94 con-\ntains 1.4 million edges and 4,814 dimensions of original features.\nThe graph propaga...",
+  "prompt": "You are a research paper analyzer. Analyze this research paper and extract key information. If you can't find certain information, focus on what you can find in the text.\n\nReturn your analysis in this...",
+  "response": "{\n    \"main_topic\": \"Large-Scale Spectral Graph Neural Networks\",\n    \"objective\": \"To enhance the scalability of spectral GNNs without decoupling the graph propagation phase.\",\n    \"methodology\": \"The paper proposes a novel methodology termed Spectral Graph Neural Networks with Laplacian Sparsification (SGNN-LS), inspired by the classic technique of Laplacian sparsification.\",\n    \"key_findings\": \"The proposed method achieves comparable or even superior performance compared to the corresponding base models, while sampling far fewer edges than the theoretical bound.\"\n}"
+}
