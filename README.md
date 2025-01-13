@@ -14,8 +14,8 @@ A machine learning pipeline that analyzes academic papers to determine their pub
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/googleboy-byte/research-grading-ai-pipeline
+cd <research-grading-ai-pipeline>
 ```
 
 2. Install dependencies:
@@ -75,7 +75,3 @@ The script generates:
 The repository includes a pre-trained publishability classifier. To retrain:
 1. Place training papers in appropriate directories under `data/Train/`
 2. Run the training script (not included in basic distribution)
-
-## License
-
-MIT License - See LICENSE file for details 
