@@ -1,5 +1,0 @@
-{
-  "text": "Generalization in ReLU Networks via Restricted\nIsometry and Norm Concentration\nAbstract\nRegression tasks, while aiming to model relationships across the entire input space,\nare often constrained by li...",
-  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
-  "response": "{\n    \"research_type\": \"theoretical\",\n    \"methods_used\": [\n        \"Chaining theory of stochastic processes\",\n        \"Sub-Gaussian metric\",\n        \"Concentration statements for the empirical norm\"\n    ],\n    \"data_collection\": \"Not mentioned in the provided text.\",\n    \"analysis_techniques\": [\n        \"Bounding the covering numbers of the networks using the Sub-Gaussian metric\",\n        \"Applying chaining techniques to derive concentration rates\"\n    ]\n}"
-}

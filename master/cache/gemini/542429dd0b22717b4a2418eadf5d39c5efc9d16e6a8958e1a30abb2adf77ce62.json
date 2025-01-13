@@ -1,5 +1,0 @@
-{
-  "text": "Methods\nConcept Fidelity\nDecoupling Ability\nVideo Quality\nCLIP-T\u2191\nCLIP-I\u2191\nCLIP-T\u2191\nCLIP-I\u2191\nDINO-I\u2191\nMotion Smoothness\u2191\nDynamic Degree\u2191\nAesthetic Quality\u2191\nImaging Quality\u2191\nMerge Textual and Visual Embedd...",
-  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
-  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"CLIP image encoder\",\n        \"query transformer (Q-Former) network\",\n        \"Decouple Attention Module (DAM)\",\n        \"Multi-Concept Injector (MC-Injector)\"\n    ],\n    \"data_collection\": \"A data collection pipeline was established to collect over 1.3 million video-entity pairs spanning diverse conceptual domains, including humans, livings, and various object categories.\",\n    \"analysis_techniques\": []\n}"
-}

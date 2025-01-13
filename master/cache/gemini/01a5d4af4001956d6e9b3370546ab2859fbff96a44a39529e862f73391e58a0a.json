@@ -1,5 +1,0 @@
-{
-  "text": "Furthermore, some studies establish upper bounds on the Kullback-Leibler\n(KL) divergence or the total variation (TV) distance between the data-generating distribution and the distribution learned by t...",
-  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
-  "response": "{\n    \"research_type\": \"theoretical\",\n    \"methods_used\": [\n        \"Wasserstein distance\",\n        \"Reconstruction loss\",\n        \"Gaussian distributions\",\n        \"Neural network\",\n        \"Discrete decoder\"\n    ],\n    \"data_collection\": \"Not mentioned\",\n    \"analysis_techniques\": [\n        \"Quantitative upper bound\",\n        \"Non-exponential dependencies\",\n        \"Simple proofs\"\n    ]\n}"
-}

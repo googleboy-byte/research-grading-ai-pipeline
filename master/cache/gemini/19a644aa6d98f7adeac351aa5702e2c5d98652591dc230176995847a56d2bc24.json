@@ -1,5 +1,0 @@
-{
-  "text": "Conclusion: We contribute to the advancement of QML algorithms in defect\nprediction, unveiling the potential for further research in this domain. The specific\nscenario of the Short-Term Activity Frame...",
-  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
-  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"Quantum Support Vector Classifiers (QSVC)\",\n        \"PQSVC (Pegasos QSVC)\",\n        \"Support Vector Classifier (SVC)\",\n        \"Homogeneous Ensemble approach\",\n        \"Aggregation strategy\",\n        \"Threshold-tuning techniques\"\n    ],\n    \"data_collection\": \"14 open-source software projects with diverse dataset sizes encompassing 30,924 data instances\",\n    \"analysis_techniques\": \"We perform our investigation using the following key steps.\"\n}"
-}

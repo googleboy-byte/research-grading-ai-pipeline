@@ -1,5 +1,0 @@
-{
-  "text": "Like\nprior text-to-image autoregressive models [10, 61, 63], it\nconsists of two stages: a VQVAE [54, 67], that maps im-\nage patches into tokens indices, and an autoregressive trans-\nformer [15] that m...",
-  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
-  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"Autoregressive models\",\n        \"VQVAE\",\n        \"Transformer\",\n        \"Classifier-free guidance\",\n        \"Distillation loss\",\n        \"Next-token prediction\"\n    ],\n    \"data_collection\": \"The paper does not mention how data was collected or generated.\",\n    \"analysis_techniques\": [\n        \"Quantitative evaluation on established benchmarks\",\n        \"Comparison to state-of-the-art task-specific methods\"\n    ]\n}"
-}

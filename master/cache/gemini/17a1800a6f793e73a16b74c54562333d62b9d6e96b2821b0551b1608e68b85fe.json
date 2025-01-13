@@ -1,5 +1,0 @@
-{
-  "text": "Although our research\nconcentrates on TL and MTL, we present, to our knowledge, the first experimental results on the\nrelatively recent dataset from Fares (2016).\n2\nRelated Work\nApproaches to interpre...",
-  "prompt": "You are a research paper analyzer. Analyze the research methodology in this paper. If the methodology section is not clearly defined, look for methodological elements throughout the text.\n\nReturn your...",
-  "response": "{\n    \"research_type\": \"empirical\",\n    \"methods_used\": [\n        \"Transfer learning\",\n        \"Multi-task learning\",\n        \"Neural classification model\",\n        \"Maximum Entropy\",\n        \"Support Vector Machines\",\n        \"Word embeddings\"\n    ],\n    \"data_collection\": \"The dataset used in this study is derived from established linguistic resources, including NomBank and the Prague Czech-English Dependency Treebank 2.0 (PCEDT).\",\n    \"analysis_techniques\": [\n        \"Error analysis\",\n        \"Quantitative analysis\",\n        \"Qualitative analysis\"\n    ]\n}"
-}
