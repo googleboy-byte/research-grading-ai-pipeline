@@ -1,0 +1,299 @@
+STDOUT:
+================================================================================
+
+Cross-validation Metrics:
+================================================================================
+   Metric  Mean Std Dev   Min   Max
+ Accuracy 0.867   0.163 0.667 1.000
+Precision 0.867   0.163 0.667 1.000
+   Recall 1.000   0.000 1.000 1.000
+ F1 Score 0.920   0.098 0.800 1.000
+================================================================================
+
+Confusion Matrix:
+========================================
+                  Predicted
+                  N    P
+Actual  N        5    0   
+        P        0    10  
+========================================
+N: Non-Publishable, P: Publishable
+
+Test Predictions:
+====================================================================================================
+Filename      Prediction Confidence Prob_Publishable Prob_NonPublishable
+P001.pdf Non-Publishable      0.562            0.562               0.438
+P002.pdf Non-Publishable      0.792            0.208               0.792
+P003.pdf Non-Publishable      0.644            0.644               0.356
+P004.pdf     Publishable      0.712            0.712               0.288
+P005.pdf Non-Publishable      0.578            0.578               0.422
+P006.pdf Non-Publishable      0.570            0.570               0.430
+P007.pdf     Publishable      0.726            0.726               0.274
+P008.pdf Non-Publishable      0.612            0.612               0.388
+P009.pdf Non-Publishable      0.630            0.630               0.370
+P010.pdf Non-Publishable      0.636            0.636               0.364
+P011.pdf Non-Publishable      0.534            0.534               0.466
+P012.pdf Non-Publishable      0.664            0.664               0.336
+P013.pdf     Publishable      0.730            0.730               0.270
+P014.pdf     Publishable      0.748            0.748               0.252
+P015.pdf Non-Publishable      0.610            0.610               0.390
+P016.pdf Non-Publishable      0.656            0.344               0.656
+P017.pdf Non-Publishable      0.566            0.566               0.434
+P018.pdf Non-Publishable      0.556            0.556               0.444
+P019.pdf Non-Publishable      0.600            0.600               0.400
+P020.pdf Non-Publishable      0.642            0.642               0.358
+P021.pdf Non-Publishable      0.652            0.652               0.348
+P022.pdf Non-Publishable      0.550            0.450               0.550
+P023.pdf Non-Publishable      0.644            0.644               0.356
+P024.pdf Non-Publishable      0.666            0.666               0.334
+P025.pdf Non-Publishable      0.696            0.696               0.304
+P026.pdf Non-Publishable      0.514            0.514               0.486
+P027.pdf Non-Publishable      0.502            0.502               0.498
+P028.pdf Non-Publishable      0.674            0.674               0.326
+P029.pdf Non-Publishable      0.566            0.566               0.434
+P030.pdf Non-Publishable      0.584            0.584               0.416
+P031.pdf Non-Publishable      0.544            0.544               0.456
+P032.pdf Non-Publishable      0.706            0.294               0.706
+P033.pdf Non-Publishable      0.580            0.580               0.420
+P034.pdf     Publishable      0.730            0.730               0.270
+P035.pdf Non-Publishable      0.506            0.494               0.506
+P036.pdf Non-Publishable      0.686            0.314               0.686
+P037.pdf     Publishable      0.770            0.770               0.230
+P038.pdf Non-Publishable      0.610            0.610               0.390
+P039.pdf Non-Publishable      0.566            0.434               0.566
+P040.pdf Non-Publishable      0.648            0.648               0.352
+P041.pdf Non-Publishable      0.560            0.440               0.560
+P042.pdf Non-Publishable      0.612            0.612               0.388
+P043.pdf Non-Publishable      0.668            0.332               0.668
+P044.pdf Non-Publishable      0.638            0.638               0.362
+P045.pdf Non-Publishable      0.540            0.540               0.460
+P046.pdf Non-Publishable      0.690            0.690               0.310
+P047.pdf Non-Publishable      0.718            0.282               0.718
+P048.pdf Non-Publishable      0.574            0.574               0.426
+P049.pdf     Publishable      0.744            0.744               0.256
+P050.pdf Non-Publishable      0.640            0.640               0.360
+P051.pdf Non-Publishable      0.638            0.638               0.362
+P052.pdf Non-Publishable      0.660            0.660               0.340
+P053.pdf Non-Publishable      0.566            0.434               0.566
+P054.pdf Non-Publishable      0.688            0.688               0.312
+P055.pdf Non-Publishable      0.518            0.518               0.482
+P056.pdf Non-Publishable      0.698            0.302               0.698
+P057.pdf Non-Publishable      0.528            0.472               0.528
+P058.pdf     Publishable      0.750            0.750               0.250
+P059.pdf Non-Publishable      0.614            0.614               0.386
+P060.pdf Non-Publishable      0.576            0.576               0.424
+P061.pdf Non-Publishable      0.618            0.618               0.382
+P062.pdf     Publishable      0.736            0.736               0.264
+P063.pdf     Publishable      0.708            0.708               0.292
+P064.pdf     Publishable      0.748            0.748               0.252
+P065.pdf Non-Publishable      0.624            0.624               0.376
+P066.pdf     Publishable      0.776            0.776               0.224
+P067.pdf Non-Publishable      0.556            0.556               0.444
+P068.pdf Non-Publishable      0.540            0.540               0.460
+P069.pdf Non-Publishable      0.562            0.438               0.562
+P070.pdf Non-Publishable      0.502            0.498               0.502
+P071.pdf     Publishable      0.720            0.720               0.280
+P072.pdf Non-Publishable      0.560            0.560               0.440
+P073.pdf Non-Publishable      0.714            0.286               0.714
+P074.pdf Non-Publishable      0.596            0.596               0.404
+P075.pdf     Publishable      0.704            0.704               0.296
+P076.pdf Non-Publishable      0.606            0.606               0.394
+P077.pdf Non-Publishable      0.502            0.498               0.502
+P078.pdf Non-Publishable      0.568            0.432               0.568
+P079.pdf Non-Publishable      0.526            0.526               0.474
+P080.pdf Non-Publishable      0.606            0.606               0.394
+P081.pdf Non-Publishable      0.502            0.502               0.498
+P082.pdf Non-Publishable      0.606            0.606               0.394
+P083.pdf Non-Publishable      0.562            0.562               0.438
+P084.pdf     Publishable      0.714            0.714               0.286
+P085.pdf Non-Publishable      0.688            0.688               0.312
+P086.pdf Non-Publishable      0.510            0.490               0.510
+P087.pdf     Publishable      0.736            0.736               0.264
+P088.pdf Non-Publishable      0.690            0.690               0.310
+P089.pdf     Publishable      0.722            0.722               0.278
+P090.pdf Non-Publishable      0.666            0.666               0.334
+P091.pdf Non-Publishable      0.682            0.682               0.318
+P092.pdf     Publishable      0.764            0.764               0.236
+P093.pdf Non-Publishable      0.528            0.528               0.472
+P094.pdf Non-Publishable      0.702            0.298               0.702
+P095.pdf Non-Publishable      0.606            0.606               0.394
+P096.pdf Non-Publishable      0.712            0.288               0.712
+P097.pdf Non-Publishable      0.672            0.328               0.672
+P098.pdf Non-Publishable      0.514            0.514               0.486
+P099.pdf Non-Publishable      0.638            0.638               0.362
+P100.pdf Non-Publishable      0.512            0.488               0.512
+P101.pdf Non-Publishable      0.576            0.576               0.424
+P102.pdf Non-Publishable      0.630            0.630               0.370
+P103.pdf Non-Publishable      0.560            0.560               0.440
+P104.pdf Non-Publishable      0.622            0.622               0.378
+P105.pdf Non-Publishable      0.668            0.332               0.668
+P106.pdf     Publishable      0.742            0.742               0.258
+P107.pdf Non-Publishable      0.514            0.514               0.486
+P108.pdf Non-Publishable      0.546            0.546               0.454
+P109.pdf     Publishable      0.718            0.718               0.282
+P110.pdf Non-Publishable      0.636            0.636               0.364
+P111.pdf Non-Publishable      0.526            0.526               0.474
+P112.pdf     Publishable      0.764            0.764               0.236
+P113.pdf Non-Publishable      0.510            0.510               0.490
+P114.pdf Non-Publishable      0.516            0.484               0.516
+P115.pdf Non-Publishable      0.632            0.632               0.368
+P116.pdf Non-Publishable      0.640            0.640               0.360
+P117.pdf Non-Publishable      0.624            0.624               0.376
+P118.pdf Non-Publishable      0.604            0.604               0.396
+P119.pdf Non-Publishable      0.550            0.450               0.550
+P120.pdf Non-Publishable      0.680            0.680               0.320
+P121.pdf Non-Publishable      0.534            0.534               0.466
+P122.pdf Non-Publishable      0.526            0.526               0.474
+P123.pdf Non-Publishable      0.668            0.668               0.332
+P124.pdf Non-Publishable      0.564            0.564               0.436
+P125.pdf     Publishable      0.700            0.700               0.300
+P126.pdf     Publishable      0.732            0.732               0.268
+P127.pdf Non-Publishable      0.506            0.494               0.506
+P128.pdf Non-Publishable      0.660            0.660               0.340
+P129.pdf Non-Publishable      0.582            0.418               0.582
+P130.pdf Non-Publishable      0.606            0.606               0.394
+P131.pdf     Publishable      0.772            0.772               0.228
+P132.pdf Non-Publishable      0.564            0.564               0.436
+P133.pdf Non-Publishable      0.670            0.670               0.330
+P134.pdf Non-Publishable      0.704            0.296               0.704
+P135.pdf Non-Publishable      0.634            0.634               0.366
+====================================================================================================
+
+Summary Statistics (threshold = 0.7):
+Total papers processed: 135
+Publishable papers: 24 (17.8%)
+Non-publishable papers: 111 (82.2%)
+Average confidence: 0.627
+
+Probability Distribution:
+Mean probability of being publishable: 0.580
+Median probability of being publishable: 0.606
+Std dev of probabilities: 0.126
+
+Top 10 Most Important BERT Features:
+ feature  importance
+bert_764    0.030593
+ bert_71    0.026636
+bert_500    0.022000
+bert_513    0.021688
+bert_371    0.020308
+bert_742    0.019252
+bert_274    0.019076
+bert_533    0.016480
+bert_592    0.016271
+bert_740    0.015667
+
+
+STDERR:
+================================================================================
+2025-01-13 14:36:42,943 - INFO - Starting paper classification using BERT embeddings...
+2025-01-13 14:36:42,943 - INFO - Using probability threshold: 0.7
+2025-01-13 14:36:42,944 - INFO - 
+Preparing data for evaluation...
+2025-01-13 14:36:42,944 - INFO - Extracting BERT embeddings for training...
+
+Processing training papers:   0%|          | 0/15 [00:00<?, ?it/s]2025-01-13 14:36:42,945 - INFO - Processed R011.pdf - Label: Publishable
+2025-01-13 14:36:42,946 - INFO - Processed R006.pdf - Label: Publishable
+2025-01-13 14:36:42,946 - INFO - Processed R008.pdf - Label: Publishable
+2025-01-13 14:36:42,946 - INFO - Processed R015.pdf - Label: Publishable
+2025-01-13 14:36:42,947 - INFO - Processed R010.pdf - Label: Publishable
+2025-01-13 14:36:42,947 - INFO - Processed R014.pdf - Label: Publishable
+2025-01-13 14:36:42,948 - INFO - Processed R012.pdf - Label: Publishable
+2025-01-13 14:36:42,948 - INFO - Processed R009.pdf - Label: Publishable
+2025-01-13 14:36:42,948 - INFO - Processed R013.pdf - Label: Publishable
+2025-01-13 14:36:42,949 - INFO - Processed R007.pdf - Label: Publishable
+2025-01-13 14:36:42,949 - INFO - Processed R002.pdf - Label: Non-Publishable
+2025-01-13 14:36:42,950 - INFO - Processed R004.pdf - Label: Non-Publishable
+2025-01-13 14:36:42,950 - INFO - Processed R005.pdf - Label: Non-Publishable
+2025-01-13 14:36:42,951 - INFO - Processed R001.pdf - Label: Non-Publishable
+2025-01-13 14:36:42,951 - INFO - Processed R003.pdf - Label: Non-Publishable
+
+Processing training papers: 100%|██████████| 15/15 [00:00<00:00, 2272.51it/s]
+2025-01-13 14:36:42,960 - INFO - 
+Feature matrix shape: (15, 768)
+2025-01-13 14:36:42,960 - INFO - Number of features: 768
+2025-01-13 14:36:42,960 - INFO - Number of samples: 15
+2025-01-13 14:36:42,960 - INFO - Class distribution:
+2025-01-13 14:36:42,961 - INFO - - Publishable: 10
+2025-01-13 14:36:42,961 - INFO - - Non-Publishable: 5
+2025-01-13 14:36:42,961 - INFO - Loading existing model...
+2025-01-13 14:36:43,049 - INFO - 
+Evaluating classifier...
+2025-01-13 14:36:59,688 - INFO - 
+Classifying all test papers...
+2025-01-13 14:36:59,688 - INFO - 
+Classifying all 135 papers from test directory
+2025-01-13 14:36:59,688 - INFO - Using probability threshold: 0.7
+
+Classifying test papers:   0%|          | 0/135 [00:00<?, ?it/s]
+Classifying test papers:   1%|▏         | 2/135 [00:00<00:10, 12.70it/s]
+Classifying test papers:   3%|▎         | 4/135 [00:00<00:09, 13.22it/s]
+Classifying test papers:   4%|▍         | 6/135 [00:00<00:10, 12.08it/s]
+Classifying test papers:   6%|▌         | 8/135 [00:00<00:10, 11.94it/s]
+Classifying test papers:   7%|▋         | 10/135 [00:00<00:10, 12.17it/s]
+Classifying test papers:   9%|▉         | 12/135 [00:01<00:10, 11.68it/s]
+Classifying test papers:  10%|█         | 14/135 [00:01<00:10, 12.01it/s]
+Classifying test papers:  12%|█▏        | 16/135 [00:01<00:09, 12.48it/s]
+Classifying test papers:  13%|█▎        | 18/135 [00:01<00:08, 13.23it/s]
+Classifying test papers:  15%|█▍        | 20/135 [00:01<00:08, 13.79it/s]
+Classifying test papers:  16%|█▋        | 22/135 [00:01<00:07, 14.13it/s]
+Classifying test papers:  18%|█▊        | 24/135 [00:01<00:07, 14.48it/s]
+Classifying test papers:  19%|█▉        | 26/135 [00:01<00:07, 14.68it/s]
+Classifying test papers:  21%|██        | 28/135 [00:02<00:07, 14.36it/s]
+Classifying test papers:  22%|██▏       | 30/135 [00:02<00:07, 14.63it/s]
+Classifying test papers:  24%|██▎       | 32/135 [00:02<00:07, 12.98it/s]
+Classifying test papers:  25%|██▌       | 34/135 [00:02<00:08, 12.32it/s]
+Classifying test papers:  27%|██▋       | 36/135 [00:02<00:07, 12.39it/s]
+Classifying test papers:  28%|██▊       | 38/135 [00:02<00:08, 11.35it/s]
+Classifying test papers:  30%|██▉       | 40/135 [00:03<00:07, 11.98it/s]
+Classifying test papers:  31%|███       | 42/135 [00:03<00:07, 12.23it/s]
+Classifying test papers:  33%|███▎      | 44/135 [00:03<00:07, 12.97it/s]
+Classifying test papers:  34%|███▍      | 46/135 [00:03<00:06, 12.80it/s]
+Classifying test papers:  36%|███▌      | 48/135 [00:03<00:06, 13.41it/s]
+Classifying test papers:  37%|███▋      | 50/135 [00:03<00:06, 12.83it/s]
+Classifying test papers:  39%|███▊      | 52/135 [00:04<00:06, 13.46it/s]
+Classifying test papers:  40%|████      | 54/135 [00:04<00:06, 12.89it/s]
+Classifying test papers:  41%|████▏     | 56/135 [00:04<00:06, 12.25it/s]
+Classifying test papers:  43%|████▎     | 58/135 [00:04<00:06, 11.99it/s]
+Classifying test papers:  44%|████▍     | 60/135 [00:04<00:06, 11.62it/s]
+Classifying test papers:  46%|████▌     | 62/135 [00:04<00:06, 11.45it/s]
+Classifying test papers:  47%|████▋     | 64/135 [00:05<00:05, 12.00it/s]
+Classifying test papers:  49%|████▉     | 66/135 [00:05<00:05, 12.74it/s]
+Classifying test papers:  50%|█████     | 68/135 [00:05<00:05, 13.02it/s]
+Classifying test papers:  52%|█████▏    | 70/135 [00:05<00:04, 13.52it/s]
+Classifying test papers:  53%|█████▎    | 72/135 [00:05<00:05, 11.70it/s]
+Classifying test papers:  55%|█████▍    | 74/135 [00:05<00:05, 11.70it/s]
+Classifying test papers:  56%|█████▋    | 76/135 [00:06<00:04, 12.44it/s]
+Classifying test papers:  58%|█████▊    | 78/135 [00:06<00:04, 11.84it/s]
+Classifying test papers:  59%|█████▉    | 80/135 [00:06<00:04, 11.86it/s]
+Classifying test papers:  61%|██████    | 82/135 [00:06<00:04, 11.55it/s]
+Classifying test papers:  62%|██████▏   | 84/135 [00:06<00:04, 11.30it/s]
+Classifying test papers:  64%|██████▎   | 86/135 [00:06<00:04, 11.60it/s]
+Classifying test papers:  65%|██████▌   | 88/135 [00:07<00:04, 11.65it/s]
+Classifying test papers:  67%|██████▋   | 90/135 [00:07<00:03, 12.46it/s]
+Classifying test papers:  68%|██████▊   | 92/135 [00:07<00:03, 13.15it/s]
+Classifying test papers:  70%|██████▉   | 94/135 [00:07<00:03, 13.23it/s]
+Classifying test papers:  71%|███████   | 96/135 [00:07<00:02, 13.76it/s]
+Classifying test papers:  73%|███████▎  | 98/135 [00:07<00:02, 14.10it/s]
+Classifying test papers:  74%|███████▍  | 100/135 [00:07<00:02, 13.52it/s]
+Classifying test papers:  76%|███████▌  | 102/135 [00:08<00:02, 13.95it/s]
+Classifying test papers:  77%|███████▋  | 104/135 [00:08<00:02, 14.28it/s]
+Classifying test papers:  79%|███████▊  | 106/135 [00:08<00:01, 14.54it/s]
+Classifying test papers:  80%|████████  | 108/135 [00:08<00:01, 14.70it/s]
+Classifying test papers:  81%|████████▏ | 110/135 [00:08<00:01, 14.37it/s]
+Classifying test papers:  83%|████████▎ | 112/135 [00:08<00:01, 14.58it/s]
+Classifying test papers:  84%|████████▍ | 114/135 [00:08<00:01, 14.78it/s]
+Classifying test papers:  86%|████████▌ | 116/135 [00:09<00:01, 13.66it/s]
+Classifying test papers:  87%|████████▋ | 118/135 [00:09<00:01, 13.29it/s]
+Classifying test papers:  89%|████████▉ | 120/135 [00:09<00:01, 13.02it/s]
+Classifying test papers:  90%|█████████ | 122/135 [00:09<00:01, 12.85it/s]
+Classifying test papers:  92%|█████████▏| 124/135 [00:09<00:00, 12.43it/s]
+Classifying test papers:  93%|█████████▎| 126/135 [00:09<00:00, 10.64it/s]
+Classifying test papers:  95%|█████████▍| 128/135 [00:10<00:00,  9.21it/s]
+Classifying test papers:  96%|█████████▋| 130/135 [00:10<00:00,  9.16it/s]
+Classifying test papers:  97%|█████████▋| 131/135 [00:10<00:00,  9.28it/s]
+Classifying test papers:  98%|█████████▊| 132/135 [00:10<00:00,  9.32it/s]
+Classifying test papers:  99%|█████████▉| 134/135 [00:10<00:00, 10.80it/s]
+Classifying test papers: 100%|██████████| 135/135 [00:10<00:00, 12.46it/s]
+2025-01-13 14:37:10,673 - INFO - 
+Process completed!
