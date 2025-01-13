@@ -1,0 +1,947 @@
+[
+  {
+    "Filename": "P001.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.562",
+    "Prob_Publishable": "0.562",
+    "Prob_NonPublishable": "0.438"
+  },
+  {
+    "Filename": "P002.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.792",
+    "Prob_Publishable": "0.208",
+    "Prob_NonPublishable": "0.792"
+  },
+  {
+    "Filename": "P003.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.644",
+    "Prob_Publishable": "0.644",
+    "Prob_NonPublishable": "0.356"
+  },
+  {
+    "Filename": "P004.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.712",
+    "Prob_Publishable": "0.712",
+    "Prob_NonPublishable": "0.288"
+  },
+  {
+    "Filename": "P005.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.578",
+    "Prob_Publishable": "0.578",
+    "Prob_NonPublishable": "0.422"
+  },
+  {
+    "Filename": "P006.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.570",
+    "Prob_Publishable": "0.570",
+    "Prob_NonPublishable": "0.430"
+  },
+  {
+    "Filename": "P007.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.726",
+    "Prob_Publishable": "0.726",
+    "Prob_NonPublishable": "0.274"
+  },
+  {
+    "Filename": "P008.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.612",
+    "Prob_Publishable": "0.612",
+    "Prob_NonPublishable": "0.388"
+  },
+  {
+    "Filename": "P009.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.630",
+    "Prob_Publishable": "0.630",
+    "Prob_NonPublishable": "0.370"
+  },
+  {
+    "Filename": "P010.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.636",
+    "Prob_Publishable": "0.636",
+    "Prob_NonPublishable": "0.364"
+  },
+  {
+    "Filename": "P011.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.534",
+    "Prob_Publishable": "0.534",
+    "Prob_NonPublishable": "0.466"
+  },
+  {
+    "Filename": "P012.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.664",
+    "Prob_Publishable": "0.664",
+    "Prob_NonPublishable": "0.336"
+  },
+  {
+    "Filename": "P013.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.730",
+    "Prob_Publishable": "0.730",
+    "Prob_NonPublishable": "0.270"
+  },
+  {
+    "Filename": "P014.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.748",
+    "Prob_Publishable": "0.748",
+    "Prob_NonPublishable": "0.252"
+  },
+  {
+    "Filename": "P015.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.610",
+    "Prob_Publishable": "0.610",
+    "Prob_NonPublishable": "0.390"
+  },
+  {
+    "Filename": "P016.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.656",
+    "Prob_Publishable": "0.344",
+    "Prob_NonPublishable": "0.656"
+  },
+  {
+    "Filename": "P017.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.566",
+    "Prob_Publishable": "0.566",
+    "Prob_NonPublishable": "0.434"
+  },
+  {
+    "Filename": "P018.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.556",
+    "Prob_Publishable": "0.556",
+    "Prob_NonPublishable": "0.444"
+  },
+  {
+    "Filename": "P019.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.600",
+    "Prob_Publishable": "0.600",
+    "Prob_NonPublishable": "0.400"
+  },
+  {
+    "Filename": "P020.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.642",
+    "Prob_Publishable": "0.642",
+    "Prob_NonPublishable": "0.358"
+  },
+  {
+    "Filename": "P021.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.652",
+    "Prob_Publishable": "0.652",
+    "Prob_NonPublishable": "0.348"
+  },
+  {
+    "Filename": "P022.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.550",
+    "Prob_Publishable": "0.450",
+    "Prob_NonPublishable": "0.550"
+  },
+  {
+    "Filename": "P023.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.644",
+    "Prob_Publishable": "0.644",
+    "Prob_NonPublishable": "0.356"
+  },
+  {
+    "Filename": "P024.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.666",
+    "Prob_Publishable": "0.666",
+    "Prob_NonPublishable": "0.334"
+  },
+  {
+    "Filename": "P025.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.696",
+    "Prob_Publishable": "0.696",
+    "Prob_NonPublishable": "0.304"
+  },
+  {
+    "Filename": "P026.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.514",
+    "Prob_Publishable": "0.514",
+    "Prob_NonPublishable": "0.486"
+  },
+  {
+    "Filename": "P027.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.502",
+    "Prob_Publishable": "0.502",
+    "Prob_NonPublishable": "0.498"
+  },
+  {
+    "Filename": "P028.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.674",
+    "Prob_Publishable": "0.674",
+    "Prob_NonPublishable": "0.326"
+  },
+  {
+    "Filename": "P029.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.566",
+    "Prob_Publishable": "0.566",
+    "Prob_NonPublishable": "0.434"
+  },
+  {
+    "Filename": "P030.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.584",
+    "Prob_Publishable": "0.584",
+    "Prob_NonPublishable": "0.416"
+  },
+  {
+    "Filename": "P031.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.544",
+    "Prob_Publishable": "0.544",
+    "Prob_NonPublishable": "0.456"
+  },
+  {
+    "Filename": "P032.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.706",
+    "Prob_Publishable": "0.294",
+    "Prob_NonPublishable": "0.706"
+  },
+  {
+    "Filename": "P033.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.580",
+    "Prob_Publishable": "0.580",
+    "Prob_NonPublishable": "0.420"
+  },
+  {
+    "Filename": "P034.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.730",
+    "Prob_Publishable": "0.730",
+    "Prob_NonPublishable": "0.270"
+  },
+  {
+    "Filename": "P035.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.506",
+    "Prob_Publishable": "0.494",
+    "Prob_NonPublishable": "0.506"
+  },
+  {
+    "Filename": "P036.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.686",
+    "Prob_Publishable": "0.314",
+    "Prob_NonPublishable": "0.686"
+  },
+  {
+    "Filename": "P037.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.770",
+    "Prob_Publishable": "0.770",
+    "Prob_NonPublishable": "0.230"
+  },
+  {
+    "Filename": "P038.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.610",
+    "Prob_Publishable": "0.610",
+    "Prob_NonPublishable": "0.390"
+  },
+  {
+    "Filename": "P039.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.566",
+    "Prob_Publishable": "0.434",
+    "Prob_NonPublishable": "0.566"
+  },
+  {
+    "Filename": "P040.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.648",
+    "Prob_Publishable": "0.648",
+    "Prob_NonPublishable": "0.352"
+  },
+  {
+    "Filename": "P041.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.560",
+    "Prob_Publishable": "0.440",
+    "Prob_NonPublishable": "0.560"
+  },
+  {
+    "Filename": "P042.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.612",
+    "Prob_Publishable": "0.612",
+    "Prob_NonPublishable": "0.388"
+  },
+  {
+    "Filename": "P043.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.668",
+    "Prob_Publishable": "0.332",
+    "Prob_NonPublishable": "0.668"
+  },
+  {
+    "Filename": "P044.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.638",
+    "Prob_Publishable": "0.638",
+    "Prob_NonPublishable": "0.362"
+  },
+  {
+    "Filename": "P045.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.540",
+    "Prob_Publishable": "0.540",
+    "Prob_NonPublishable": "0.460"
+  },
+  {
+    "Filename": "P046.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.690",
+    "Prob_Publishable": "0.690",
+    "Prob_NonPublishable": "0.310"
+  },
+  {
+    "Filename": "P047.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.718",
+    "Prob_Publishable": "0.282",
+    "Prob_NonPublishable": "0.718"
+  },
+  {
+    "Filename": "P048.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.574",
+    "Prob_Publishable": "0.574",
+    "Prob_NonPublishable": "0.426"
+  },
+  {
+    "Filename": "P049.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.744",
+    "Prob_Publishable": "0.744",
+    "Prob_NonPublishable": "0.256"
+  },
+  {
+    "Filename": "P050.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.640",
+    "Prob_Publishable": "0.640",
+    "Prob_NonPublishable": "0.360"
+  },
+  {
+    "Filename": "P051.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.638",
+    "Prob_Publishable": "0.638",
+    "Prob_NonPublishable": "0.362"
+  },
+  {
+    "Filename": "P052.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.660",
+    "Prob_Publishable": "0.660",
+    "Prob_NonPublishable": "0.340"
+  },
+  {
+    "Filename": "P053.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.566",
+    "Prob_Publishable": "0.434",
+    "Prob_NonPublishable": "0.566"
+  },
+  {
+    "Filename": "P054.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.688",
+    "Prob_Publishable": "0.688",
+    "Prob_NonPublishable": "0.312"
+  },
+  {
+    "Filename": "P055.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.518",
+    "Prob_Publishable": "0.518",
+    "Prob_NonPublishable": "0.482"
+  },
+  {
+    "Filename": "P056.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.698",
+    "Prob_Publishable": "0.302",
+    "Prob_NonPublishable": "0.698"
+  },
+  {
+    "Filename": "P057.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.528",
+    "Prob_Publishable": "0.472",
+    "Prob_NonPublishable": "0.528"
+  },
+  {
+    "Filename": "P058.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.750",
+    "Prob_Publishable": "0.750",
+    "Prob_NonPublishable": "0.250"
+  },
+  {
+    "Filename": "P059.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.614",
+    "Prob_Publishable": "0.614",
+    "Prob_NonPublishable": "0.386"
+  },
+  {
+    "Filename": "P060.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.576",
+    "Prob_Publishable": "0.576",
+    "Prob_NonPublishable": "0.424"
+  },
+  {
+    "Filename": "P061.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.618",
+    "Prob_Publishable": "0.618",
+    "Prob_NonPublishable": "0.382"
+  },
+  {
+    "Filename": "P062.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.736",
+    "Prob_Publishable": "0.736",
+    "Prob_NonPublishable": "0.264"
+  },
+  {
+    "Filename": "P063.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.708",
+    "Prob_Publishable": "0.708",
+    "Prob_NonPublishable": "0.292"
+  },
+  {
+    "Filename": "P064.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.748",
+    "Prob_Publishable": "0.748",
+    "Prob_NonPublishable": "0.252"
+  },
+  {
+    "Filename": "P065.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.624",
+    "Prob_Publishable": "0.624",
+    "Prob_NonPublishable": "0.376"
+  },
+  {
+    "Filename": "P066.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.776",
+    "Prob_Publishable": "0.776",
+    "Prob_NonPublishable": "0.224"
+  },
+  {
+    "Filename": "P067.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.556",
+    "Prob_Publishable": "0.556",
+    "Prob_NonPublishable": "0.444"
+  },
+  {
+    "Filename": "P068.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.540",
+    "Prob_Publishable": "0.540",
+    "Prob_NonPublishable": "0.460"
+  },
+  {
+    "Filename": "P069.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.562",
+    "Prob_Publishable": "0.438",
+    "Prob_NonPublishable": "0.562"
+  },
+  {
+    "Filename": "P070.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.502",
+    "Prob_Publishable": "0.498",
+    "Prob_NonPublishable": "0.502"
+  },
+  {
+    "Filename": "P071.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.720",
+    "Prob_Publishable": "0.720",
+    "Prob_NonPublishable": "0.280"
+  },
+  {
+    "Filename": "P072.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.560",
+    "Prob_Publishable": "0.560",
+    "Prob_NonPublishable": "0.440"
+  },
+  {
+    "Filename": "P073.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.714",
+    "Prob_Publishable": "0.286",
+    "Prob_NonPublishable": "0.714"
+  },
+  {
+    "Filename": "P074.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.596",
+    "Prob_Publishable": "0.596",
+    "Prob_NonPublishable": "0.404"
+  },
+  {
+    "Filename": "P075.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.704",
+    "Prob_Publishable": "0.704",
+    "Prob_NonPublishable": "0.296"
+  },
+  {
+    "Filename": "P076.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.606",
+    "Prob_Publishable": "0.606",
+    "Prob_NonPublishable": "0.394"
+  },
+  {
+    "Filename": "P077.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.502",
+    "Prob_Publishable": "0.498",
+    "Prob_NonPublishable": "0.502"
+  },
+  {
+    "Filename": "P078.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.568",
+    "Prob_Publishable": "0.432",
+    "Prob_NonPublishable": "0.568"
+  },
+  {
+    "Filename": "P079.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.526",
+    "Prob_Publishable": "0.526",
+    "Prob_NonPublishable": "0.474"
+  },
+  {
+    "Filename": "P080.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.606",
+    "Prob_Publishable": "0.606",
+    "Prob_NonPublishable": "0.394"
+  },
+  {
+    "Filename": "P081.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.502",
+    "Prob_Publishable": "0.502",
+    "Prob_NonPublishable": "0.498"
+  },
+  {
+    "Filename": "P082.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.606",
+    "Prob_Publishable": "0.606",
+    "Prob_NonPublishable": "0.394"
+  },
+  {
+    "Filename": "P083.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.562",
+    "Prob_Publishable": "0.562",
+    "Prob_NonPublishable": "0.438"
+  },
+  {
+    "Filename": "P084.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.714",
+    "Prob_Publishable": "0.714",
+    "Prob_NonPublishable": "0.286"
+  },
+  {
+    "Filename": "P085.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.688",
+    "Prob_Publishable": "0.688",
+    "Prob_NonPublishable": "0.312"
+  },
+  {
+    "Filename": "P086.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.510",
+    "Prob_Publishable": "0.490",
+    "Prob_NonPublishable": "0.510"
+  },
+  {
+    "Filename": "P087.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.736",
+    "Prob_Publishable": "0.736",
+    "Prob_NonPublishable": "0.264"
+  },
+  {
+    "Filename": "P088.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.690",
+    "Prob_Publishable": "0.690",
+    "Prob_NonPublishable": "0.310"
+  },
+  {
+    "Filename": "P089.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.722",
+    "Prob_Publishable": "0.722",
+    "Prob_NonPublishable": "0.278"
+  },
+  {
+    "Filename": "P090.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.666",
+    "Prob_Publishable": "0.666",
+    "Prob_NonPublishable": "0.334"
+  },
+  {
+    "Filename": "P091.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.682",
+    "Prob_Publishable": "0.682",
+    "Prob_NonPublishable": "0.318"
+  },
+  {
+    "Filename": "P092.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.764",
+    "Prob_Publishable": "0.764",
+    "Prob_NonPublishable": "0.236"
+  },
+  {
+    "Filename": "P093.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.528",
+    "Prob_Publishable": "0.528",
+    "Prob_NonPublishable": "0.472"
+  },
+  {
+    "Filename": "P094.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.702",
+    "Prob_Publishable": "0.298",
+    "Prob_NonPublishable": "0.702"
+  },
+  {
+    "Filename": "P095.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.606",
+    "Prob_Publishable": "0.606",
+    "Prob_NonPublishable": "0.394"
+  },
+  {
+    "Filename": "P096.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.712",
+    "Prob_Publishable": "0.288",
+    "Prob_NonPublishable": "0.712"
+  },
+  {
+    "Filename": "P097.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.672",
+    "Prob_Publishable": "0.328",
+    "Prob_NonPublishable": "0.672"
+  },
+  {
+    "Filename": "P098.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.514",
+    "Prob_Publishable": "0.514",
+    "Prob_NonPublishable": "0.486"
+  },
+  {
+    "Filename": "P099.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.638",
+    "Prob_Publishable": "0.638",
+    "Prob_NonPublishable": "0.362"
+  },
+  {
+    "Filename": "P100.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.512",
+    "Prob_Publishable": "0.488",
+    "Prob_NonPublishable": "0.512"
+  },
+  {
+    "Filename": "P101.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.576",
+    "Prob_Publishable": "0.576",
+    "Prob_NonPublishable": "0.424"
+  },
+  {
+    "Filename": "P102.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.630",
+    "Prob_Publishable": "0.630",
+    "Prob_NonPublishable": "0.370"
+  },
+  {
+    "Filename": "P103.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.560",
+    "Prob_Publishable": "0.560",
+    "Prob_NonPublishable": "0.440"
+  },
+  {
+    "Filename": "P104.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.622",
+    "Prob_Publishable": "0.622",
+    "Prob_NonPublishable": "0.378"
+  },
+  {
+    "Filename": "P105.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.668",
+    "Prob_Publishable": "0.332",
+    "Prob_NonPublishable": "0.668"
+  },
+  {
+    "Filename": "P106.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.742",
+    "Prob_Publishable": "0.742",
+    "Prob_NonPublishable": "0.258"
+  },
+  {
+    "Filename": "P107.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.514",
+    "Prob_Publishable": "0.514",
+    "Prob_NonPublishable": "0.486"
+  },
+  {
+    "Filename": "P108.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.546",
+    "Prob_Publishable": "0.546",
+    "Prob_NonPublishable": "0.454"
+  },
+  {
+    "Filename": "P109.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.718",
+    "Prob_Publishable": "0.718",
+    "Prob_NonPublishable": "0.282"
+  },
+  {
+    "Filename": "P110.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.636",
+    "Prob_Publishable": "0.636",
+    "Prob_NonPublishable": "0.364"
+  },
+  {
+    "Filename": "P111.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.526",
+    "Prob_Publishable": "0.526",
+    "Prob_NonPublishable": "0.474"
+  },
+  {
+    "Filename": "P112.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.764",
+    "Prob_Publishable": "0.764",
+    "Prob_NonPublishable": "0.236"
+  },
+  {
+    "Filename": "P113.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.510",
+    "Prob_Publishable": "0.510",
+    "Prob_NonPublishable": "0.490"
+  },
+  {
+    "Filename": "P114.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.516",
+    "Prob_Publishable": "0.484",
+    "Prob_NonPublishable": "0.516"
+  },
+  {
+    "Filename": "P115.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.632",
+    "Prob_Publishable": "0.632",
+    "Prob_NonPublishable": "0.368"
+  },
+  {
+    "Filename": "P116.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.640",
+    "Prob_Publishable": "0.640",
+    "Prob_NonPublishable": "0.360"
+  },
+  {
+    "Filename": "P117.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.624",
+    "Prob_Publishable": "0.624",
+    "Prob_NonPublishable": "0.376"
+  },
+  {
+    "Filename": "P118.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.604",
+    "Prob_Publishable": "0.604",
+    "Prob_NonPublishable": "0.396"
+  },
+  {
+    "Filename": "P119.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.550",
+    "Prob_Publishable": "0.450",
+    "Prob_NonPublishable": "0.550"
+  },
+  {
+    "Filename": "P120.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.680",
+    "Prob_Publishable": "0.680",
+    "Prob_NonPublishable": "0.320"
+  },
+  {
+    "Filename": "P121.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.534",
+    "Prob_Publishable": "0.534",
+    "Prob_NonPublishable": "0.466"
+  },
+  {
+    "Filename": "P122.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.526",
+    "Prob_Publishable": "0.526",
+    "Prob_NonPublishable": "0.474"
+  },
+  {
+    "Filename": "P123.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.668",
+    "Prob_Publishable": "0.668",
+    "Prob_NonPublishable": "0.332"
+  },
+  {
+    "Filename": "P124.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.564",
+    "Prob_Publishable": "0.564",
+    "Prob_NonPublishable": "0.436"
+  },
+  {
+    "Filename": "P125.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.700",
+    "Prob_Publishable": "0.700",
+    "Prob_NonPublishable": "0.300"
+  },
+  {
+    "Filename": "P126.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.732",
+    "Prob_Publishable": "0.732",
+    "Prob_NonPublishable": "0.268"
+  },
+  {
+    "Filename": "P127.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.506",
+    "Prob_Publishable": "0.494",
+    "Prob_NonPublishable": "0.506"
+  },
+  {
+    "Filename": "P128.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.660",
+    "Prob_Publishable": "0.660",
+    "Prob_NonPublishable": "0.340"
+  },
+  {
+    "Filename": "P129.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.582",
+    "Prob_Publishable": "0.418",
+    "Prob_NonPublishable": "0.582"
+  },
+  {
+    "Filename": "P130.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.606",
+    "Prob_Publishable": "0.606",
+    "Prob_NonPublishable": "0.394"
+  },
+  {
+    "Filename": "P131.pdf",
+    "Prediction": "Publishable",
+    "Confidence": "0.772",
+    "Prob_Publishable": "0.772",
+    "Prob_NonPublishable": "0.228"
+  },
+  {
+    "Filename": "P132.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.564",
+    "Prob_Publishable": "0.564",
+    "Prob_NonPublishable": "0.436"
+  },
+  {
+    "Filename": "P133.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.670",
+    "Prob_Publishable": "0.670",
+    "Prob_NonPublishable": "0.330"
+  },
+  {
+    "Filename": "P134.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.704",
+    "Prob_Publishable": "0.296",
+    "Prob_NonPublishable": "0.704"
+  },
+  {
+    "Filename": "P135.pdf",
+    "Prediction": "Non-Publishable",
+    "Confidence": "0.634",
+    "Prob_Publishable": "0.634",
+    "Prob_NonPublishable": "0.366"
+  }
+]

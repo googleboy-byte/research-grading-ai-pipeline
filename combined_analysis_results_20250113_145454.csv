@@ -1,0 +1,136 @@
+pdfname,publishable,conference,justification,publishability_score,processing_time
+P001.pdf,0,NA,NA,0.562,0.06396627426147461
+P002.pdf,0,NA,NA,0.208,0.0958402156829834
+P003.pdf,0,NA,NA,0.644,0.07698225975036621
+P004.pdf,1,NeurIPS,"NeurIPS is the leading machine learning conference that covers theoretical advances, neural networks, and AI, which are highly relevant to the paper's topic of training-free graph neural networks and harnessing labels as input features.",0.712,2.475883960723877
+P005.pdf,0,NA,NA,0.578,0.10616850852966309
+P006.pdf,0,NA,NA,0.57,0.0662686824798584
+P007.pdf,1,EMNLP,"The paper focuses on discourse parsing, a core topic in natural language processing. EMNLP is the leading conference in this field, with a strong track record of accepting high-quality research on discourse-related topics.",0.726,2.2951180934906006
+P008.pdf,0,NA,NA,0.612,0.14710497856140137
+P009.pdf,0,NA,NA,0.63,0.11773896217346191
+P010.pdf,0,NA,NA,0.636,0.06367659568786621
+P011.pdf,0,NA,NA,0.534,0.1242530345916748
+P012.pdf,0,NA,NA,0.664,0.11066627502441406
+P013.pdf,1,EMNLP,"The paper focuses on natural language processing and interpretation of deep neural network classifications in the language domain. EMNLP is the leading conference specifically dedicated to empirical methods and computational linguistics, making it the most suitable venue for presenting this research.",0.73,2.4233458042144775
+P014.pdf,1,CVPR,"The paper focuses on advancements in audio-visual active speaker detection, which falls under the domain of computer vision. CVPR is the premier conference in this field, providing a highly relevant platform for disseminating such research.",0.748,2.3020853996276855
+P015.pdf,0,NA,NA,0.61,0.06818580627441406
+P016.pdf,0,NA,NA,0.344,0.08622288703918457
+P017.pdf,0,NA,NA,0.566,0.06544280052185059
+P018.pdf,0,NA,NA,0.556,0.08565187454223633
+P019.pdf,0,NA,NA,0.6,0.07924008369445801
+P020.pdf,0,NA,NA,0.642,0.06612229347229004
+P021.pdf,0,NA,NA,0.652,0.0628972053527832
+P022.pdf,0,NA,NA,0.45,0.07710599899291992
+P023.pdf,0,NA,NA,0.644,0.0807499885559082
+P024.pdf,0,NA,NA,0.666,0.07199382781982422
+P025.pdf,0,NA,NA,0.696,0.07896256446838379
+P026.pdf,0,NA,NA,0.514,0.06440162658691406
+P027.pdf,0,NA,NA,0.502,0.11655926704406738
+P028.pdf,0,NA,NA,0.674,0.05437731742858887
+P029.pdf,0,NA,NA,0.566,0.06267547607421875
+P030.pdf,0,NA,NA,0.584,0.07961177825927734
+P031.pdf,0,NA,NA,0.544,0.06320405006408691
+P032.pdf,0,NA,NA,0.294,0.06345582008361816
+P033.pdf,0,NA,NA,0.58,0.15445423126220703
+P034.pdf,1,CVPR,"The paper focuses on advancements in computer vision, specifically the optimization of Vision Transformers, making CVPR the most relevant and suitable conference for presenting this research.",0.73,2.172884225845337
+P035.pdf,0,NA,NA,0.494,0.07891011238098145
+P036.pdf,0,NA,NA,0.314,0.09373617172241211
+P037.pdf,1,EMNLP,"EMNLP is the leading conference in natural language processing, the field most relevant to the paper's focus on Chinese machine reading comprehension. EMNLP emphasizes empirical methods and computational linguistics, aligning well with the paper's methodology and analysis.",0.77,2.370276689529419
+P038.pdf,0,NA,NA,0.61,0.10390543937683105
+P039.pdf,0,NA,NA,0.434,0.05725455284118652
+P040.pdf,0,NA,NA,0.648,0.115447998046875
+P041.pdf,0,NA,NA,0.44,0.0798189640045166
+P042.pdf,0,NA,NA,0.612,0.09285283088684082
+P043.pdf,0,NA,NA,0.332,0.07996726036071777
+P044.pdf,0,NA,NA,0.638,0.1185755729675293
+P045.pdf,0,NA,NA,0.54,0.06530380249023438
+P046.pdf,0,NA,NA,0.69,0.06784725189208984
+P047.pdf,0,NA,NA,0.282,0.06321382522583008
+P048.pdf,0,NA,NA,0.574,0.10289931297302246
+P049.pdf,1,CVPR,"The paper focuses on visual understanding and pattern recognition, which aligns perfectly with CVPR's scope. The research on semantic segmentation and image adaptation is directly relevant to CVPR's audience.",0.744,2.3243868350982666
+P050.pdf,0,NA,NA,0.64,0.06338000297546387
+P051.pdf,0,NA,NA,0.638,0.06315803527832031
+P052.pdf,0,NA,NA,0.66,0.06476092338562012
+P053.pdf,0,NA,NA,0.434,0.12651324272155762
+P054.pdf,0,NA,NA,0.688,0.07942748069763184
+P055.pdf,0,NA,NA,0.518,0.06499361991882324
+P056.pdf,0,NA,NA,0.302,0.06543731689453125
+P057.pdf,0,NA,NA,0.472,0.07997322082519531
+P058.pdf,1,NeurIPS,"NeurIPS is the top-rated conference for machine learning and focuses on artificial intelligence, optimization, and theoretical advances, which aligns well with the proposed research on enhancing the learning capabilities of recurrent neural networks.",0.75,2.3717970848083496
+P059.pdf,0,NA,NA,0.614,0.08231830596923828
+P060.pdf,0,NA,NA,0.576,0.08769536018371582
+P061.pdf,0,NA,NA,0.618,0.0649256706237793
+P062.pdf,1,NeurIPS,"NeurIPS is the leading conference in machine learning, and the paper's focus on neural networks and equivariance makes it a highly relevant fit.",0.736,2.275306463241577
+P063.pdf,1,NeurIPS,"NeurIPS is the top machine learning conference, and the paper's focus on neural networks and transfer learning aligns well with the conference's scope.",0.708,2.1752939224243164
+P064.pdf,1,EMNLP,"The paper focuses on natural language processing and tool comprehension, which are central themes of EMNLP. The conference's emphasis on empirical methods aligns well with the paper's experimental approach.",0.748,2.4023218154907227
+P065.pdf,0,NA,NA,0.624,0.06482315063476562
+P066.pdf,1,EMNLP,"EMNLP is the leading conference dedicated to empirical methods and computational linguistics, which aligns well with the paper's focus on vocabulary transfer and language model compression. The paper proposes a methodology that leverages vocabulary transfer for model compression, which is relevant to the conference's scope.",0.776,2.57401967048645
+P067.pdf,0,NA,NA,0.556,0.06428074836730957
+P068.pdf,0,NA,NA,0.54,0.06524848937988281
+P069.pdf,0,NA,NA,0.438,0.08960270881652832
+P070.pdf,0,NA,NA,0.498,0.10842585563659668
+P071.pdf,1,EMNLP,"EMNLP is the leading conference on natural language processing (NLP), and the paper's focus on the significance of fillers in textual representations of speech transcripts makes it highly relevant to this conference.",0.72,2.1624715328216553
+P072.pdf,0,NA,NA,0.56,0.06489300727844238
+P073.pdf,0,NA,NA,0.286,0.06613016128540039
+P074.pdf,0,NA,NA,0.596,0.06510806083679199
+P075.pdf,1,NeurIPS,"NeurIPS is the top machine learning conference that covers neural networks, AI, optimization, and theoretical advances, which are highly relevant to the paper's topic of equivariant adaptation of large pretrained models.",0.704,2.442749261856079
+P076.pdf,0,NA,NA,0.606,0.06655049324035645
+P077.pdf,0,NA,NA,0.498,0.06299543380737305
+P078.pdf,0,NA,NA,0.432,0.06930899620056152
+P079.pdf,0,NA,NA,0.526,0.0656576156616211
+P080.pdf,0,NA,NA,0.606,0.0912168025970459
+P081.pdf,0,NA,NA,0.502,0.0908362865447998
+P082.pdf,0,NA,NA,0.606,0.054363250732421875
+P083.pdf,0,NA,NA,0.562,0.07839250564575195
+P084.pdf,1,NeurIPS,"The paper delves deeply into machine learning principles, particularly the 'hard-won lesson,' which fits perfectly with NeurIPS's focus on neural networks and theoretical advancements in machine learning.",0.714,2.273843288421631
+P085.pdf,0,NA,NA,0.688,0.1279604434967041
+P086.pdf,0,NA,NA,0.49,0.11852288246154785
+P087.pdf,1,CVPR,"CVPR is the premier computer vision conference and the paper focuses on a fundamental computer vision task, feature tracking. The conference is highly relevant to the paper's topic and will attract a large audience of experts in the field.",0.736,2.3495116233825684
+P088.pdf,0,NA,NA,0.69,0.06499338150024414
+P089.pdf,1,NeurIPS,"The paper focuses on theoretical advances in machine learning, including the neural tangent kernel and lazy training, which are core topics of NeurIPS.",0.722,2.239793300628662
+P090.pdf,0,NA,NA,0.666,0.07920980453491211
+P091.pdf,0,NA,NA,0.682,0.08891487121582031
+P092.pdf,1,CVPR,"CVPR is the premier computer vision conference, and this paper focuses on image compression and image processing, which are core topics in CVPR.",0.764,2.147759437561035
+P093.pdf,0,NA,NA,0.528,0.06686162948608398
+P094.pdf,0,NA,NA,0.298,0.08305549621582031
+P095.pdf,0,NA,NA,0.606,0.06522560119628906
+P096.pdf,0,NA,NA,0.288,0.09199142456054688
+P097.pdf,0,NA,NA,0.328,0.10339570045471191
+P098.pdf,0,NA,NA,0.514,0.07808876037597656
+P099.pdf,0,NA,NA,0.638,0.06843376159667969
+P100.pdf,0,NA,NA,0.488,0.13973641395568848
+P101.pdf,0,NA,NA,0.576,0.0644826889038086
+P102.pdf,0,NA,NA,0.63,0.09155535697937012
+P103.pdf,0,NA,NA,0.56,0.09455156326293945
+P104.pdf,0,NA,NA,0.622,0.06500983238220215
+P105.pdf,0,NA,NA,0.332,0.09361886978149414
+P106.pdf,1,NeurIPS,"NeurIPS is the top machine learning conference, making it the most suitable for the paper's focus on neural networks and machine learning in brain-computer interface design.",0.742,2.270695209503174
+P107.pdf,0,NA,NA,0.514,0.06304574012756348
+P108.pdf,0,NA,NA,0.546,0.07454657554626465
+P109.pdf,1,EMNLP,"EMNLP is a highly relevant conference for this paper as it focuses on natural language processing, including transformer models and hate speech identification, which are the central topics of the paper. The paper's emphasis on empirical methods and computational linguistics further aligns with the scope of EMNLP.",0.718,2.526545286178589
+P110.pdf,0,NA,NA,0.636,0.053847551345825195
+P111.pdf,0,NA,NA,0.526,0.0652618408203125
+P112.pdf,1,NeurIPS,"The paper presents a novel approach for genomic sequence representation using graph neural networks and contrastive learning. NeurIPS, as a leading machine learning conference that covers neural networks, AI, optimization, and theoretical advances, is the most suitable platform to present these research findings.",0.764,2.4493541717529297
+P113.pdf,0,NA,NA,0.51,0.1041412353515625
+P114.pdf,0,NA,NA,0.484,0.11477446556091309
+P115.pdf,0,NA,NA,0.632,0.10359883308410645
+P116.pdf,0,NA,NA,0.64,0.13465452194213867
+P117.pdf,0,NA,NA,0.624,0.08202505111694336
+P118.pdf,0,NA,NA,0.604,0.0646204948425293
+P119.pdf,0,NA,NA,0.45,0.06381797790527344
+P120.pdf,0,NA,NA,0.68,0.06586503982543945
+P121.pdf,0,NA,NA,0.534,0.0639638900756836
+P122.pdf,0,NA,NA,0.526,0.07177186012268066
+P123.pdf,0,NA,NA,0.668,0.11577606201171875
+P124.pdf,0,NA,NA,0.564,0.10460114479064941
+P125.pdf,1,EMNLP,EMNLP is the leading natural language processing conference that covers computational linguistics and empirical methods. The paper's focus on discourse connectives and commonsense reasoning is highly relevant to the conference scope.,0.7,2.1782844066619873
+P126.pdf,1,NeurIPS,"The paper focuses on developing an innovative algorithm for estimating causal effects in linear Structural Causal Models (SCMs) using advanced machine learning techniques. NeurIPS is the top conference in the field of machine learning and AI, with a strong emphasis on theoretical advances and novel methodologies. The paper's topic aligns well with the conference's scope and will likely attract interest from the NeurIPS community.",0.732,2.7266652584075928
+P127.pdf,0,NA,NA,0.494,0.06546163558959961
+P128.pdf,0,NA,NA,0.66,0.08114361763000488
+P129.pdf,0,NA,NA,0.418,0.07973432540893555
+P130.pdf,0,NA,NA,0.606,0.11737918853759766
+P131.pdf,1,CVPR,"The paper focuses on image disentanglement, which is a topic closely aligned with the scope of CVPR. CVPR is a premier conference in the field of computer vision, and the paper's findings on utilizing inductive biases in pretrained models for disentanglement would be of interest to the CVPR audience.",0.772,2.8673529624938965
+P132.pdf,0,NA,NA,0.564,0.1043543815612793
+P133.pdf,0,NA,NA,0.67,0.0780036449432373
+P134.pdf,0,NA,NA,0.296,0.06479811668395996
+P135.pdf,0,NA,NA,0.634,0.0651547908782959
