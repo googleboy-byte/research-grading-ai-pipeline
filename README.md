@@ -15,7 +15,7 @@ A machine learning pipeline that analyzes academic papers to determine their pub
 1. Clone the repository:
 ```bash
 git clone https://github.com/googleboy-byte/research-grading-ai-pipeline
-cd <research-grading-ai-pipeline>
+cd research-grading-ai-pipeline
 ```
 
 2. Install dependencies:
