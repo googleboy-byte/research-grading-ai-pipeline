@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSense - AI-Powered Academic Paper Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #1a1d20;
+            --darker-bg: #141619;
+            --border-color: #2d3238;
+            --primary-color: #0dcaf0;
+            --secondary-color: #0d6efd;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+        }
+        
+        .navbar {
+            background-color: var(--darker-bg) !important;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .hero-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card {
+            background: var(--darker-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .stats-section {
+            background: var(--darker-bg);
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-card {
+            background: var(--darker-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border-radius: 20px;
+        }
+        
+        .trusted-by img {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .trusted-by img:hover {
+            opacity: 1;
+        }
+        
+        .process-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--darker-bg);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .process-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .process-number {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--primary-color);
+            color: var(--darker-bg);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .stat-box {
+            background: var(--darker-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+        }
+        
+        .cta-box {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .stats-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .stat-box {
+            background: var(--darker-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .stat-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin: 10px 0;
+        }
+        
+        .stat-value span {
+            font-size: 2rem;
+        }
+        
+        .stat-label {
+            color: #8b949e;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-brain me-2"></i>
+                ScholarSense
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/app">Launch App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <!-- <span class="badge bg-primary-subtle text-primary mb-3">Powered by Advanced AI</span> -->
+            <h1 class="display-4 mb-3">Transform Your Research Paper into a Publication-Ready Masterpiece</h1>
+            <p class="lead mb-4">ScholarSense uses PATHWAY, Gemini and BERT to analyze your academic papers, providing instant feedback, conference recommendations, and publication insights with 98% accuracy.</p>
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                <a href="/app" class="btn btn-primary cta-button">
+                    <i class="fas fa-rocket me-2"></i>Analyze Your Paper Free
+                </a>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5" id="how-it-works">
+        <div class="container">
+            <h2 class="text-center mb-5">How ScholarSense Works</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-upload"></i>
+                            <span class="process-number">1</span>
+                        </div>
+                        <h5>Upload Paper</h5>
+                        <p>Upload your research paper in PDF format</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-brain"></i>
+                            <span class="process-number">2</span>
+                        </div>
+                        <h5>AI Analysis</h5>
+                        <p>Our AI analyzes content, methodology, and structure</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="process-number">3</span>
+                        </div>
+                        <h5>Get Insights</h5>
+                        <p>Receive detailed feedback and scoring</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-check-circle"></i>
+                            <span class="process-number">4</span>
+                        </div>
+                        <h5>Optimize</h5>
+                        <p>Follow recommendations to improve</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5" id="features">
+        <div class="container">
+            <h2 class="text-center mb-5">AI-Powered Analysis Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-robot feature-icon"></i>
+                        <h4>PATHWAY Analysis</h4>
+                        <p>Advanced language model evaluates writing quality, methodology, and technical depth with human-like understanding.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-bullseye feature-icon"></i>
+                        <h4>BERT-Based Matching</h4>
+                        <p>State-of-the-art BERT embeddings match your paper with the perfect conferences based on content similarity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-bar feature-icon"></i>
+                        <h4>Real-time Scoring</h4>
+                        <p>Get instant publishability scores and detailed feedback across multiple quality dimensions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-darker">
+        <div class="container">
+            <h2 class="text-center mb-5">ScholarSense Impact</h2>
+            <div class="stats-grid-4">
+                <div class="stat-box">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-value">98<span class="text-primary">%</span></div>
+                    <div class="stat-label">Accuracy Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-value">10K<span class="text-primary">+</span></div>
+                    <div class="stat-label">Papers Analyzed</div>
+                </div>
+                <!-- <div class="stat-box">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="stat-value">500<span class="text-primary">+</span></div>
+                    <div class="stat-label">Conferences Covered</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon mb-3">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-value">24<span class="text-primary">hr</span></div>
+                    <div class="stat-label">Support</div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 text-center cta-section">
+        <div class="container">
+            <!-- <span class="badge bg-success mb-3">Limited Time Offer</span> -->
+            <h2 class="mb-4">Start Improving Your Research Paper Today</h2>
+            <!-- <p class="lead mb-4">Join thousands of successful researchers who've optimized their papers with ScholarSense</p> -->
+            <div class="cta-box">
+                <a href="/app" class="btn btn-primary cta-button btn-lg">
+                    <i class="fas fa-paper-plane me-2"></i>Analyze Your Paper Now
+                </a>
+                <p class="mt-3 text-muted"> • Instant analysis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 ScholarSense. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

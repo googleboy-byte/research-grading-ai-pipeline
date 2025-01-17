@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Metrics - ScholarSense</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --dark-bg: #1a1d20;
+            --darker-bg: #141619;
+            --border-color: #2d3238;
+            --primary-color: #0dcaf0;
+            --secondary-color: #0d6efd;
+        }
+        
+        body {
+            background-color: var(--dark-bg) !important;
+        }
+        
+        .navbar {
+            background-color: var(--darker-bg) !important;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .metrics-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: var(--darker-bg);
+            border: 1px solid var(--border-color);
+        }
+        
+        .metric-card {
+            background: var(--dark-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .metric-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .metric-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+        
+        .metric-chart {
+            height: 300px;
+            margin: 20px 0;
+            background: var(--darker-bg);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .performance-stat {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .performance-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .performance-label {
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin: 20px 0;
+        }
+
+        .criteria-section {
+            margin-bottom: 30px;
+        }
+
+        .criteria-header {
+            background: var(--darker-bg);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .criteria-weight {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-brain me-2"></i>
+                ScholarSense
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/app">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/performance">
+                            <i class="fas fa-chart-line me-1"></i> Performance Metrics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                            <i class="fas fa-info-circle me-1"></i> About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="metrics-container">
+        <h2 class="text-center mb-4">Performance Analytics</h2>
+        
+        <!-- Latest Batch Analysis -->
+        <div class="criteria-section">
+            <div class="criteria-header d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Latest Batch Analysis Results</h3>
+                <span id="batchTimestamp" class="text-muted"></span>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="performance-stat">
+                        <div class="performance-value" id="batchSize">-</div>
+                        <div class="performance-label">Papers Analyzed</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="performance-stat">
+                        <div class="performance-value" id="avgProcessingTime">-</div>
+                        <div class="performance-label">Avg. Processing Time</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="performance-stat">
+                        <div class="performance-value" id="successRate">-</div>
+                        <div class="performance-label">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-chart-pie metric-icon"></i>
+                            <h4 class="mb-0">Publishability Distribution</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="publishabilityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-chart-bar metric-icon"></i>
+                            <h4 class="mb-0">Conference Distribution</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="conferenceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publishability Metrics (25%) -->
+        <div class="criteria-section">
+            <div class="criteria-header d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Judging Publishability</h3>
+                <span class="criteria-weight">Weight: 25%</span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-check-circle metric-icon"></i>
+                            <h4 class="mb-0">Classification Metrics</h4>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="performance-stat">
+                                    <div class="performance-value">95%</div>
+                                    <div class="performance-label">Accuracy</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="performance-stat">
+                                    <div class="performance-value">0.94</div>
+                                    <div class="performance-label">F1 Score</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="publishabilityMetricsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-balance-scale metric-icon"></i>
+                            <h4 class="mb-0">Quality Scores Distribution</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="qualityScoresChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conference Selection (60%) -->
+        <div class="criteria-section">
+            <div class="criteria-header d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Conference Selection Performance</h3>
+                <span class="criteria-weight">Weight: 60%</span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-tachometer-alt metric-icon"></i>
+                            <h4 class="mb-0">System Performance</h4>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="performance-stat">
+                                    <div class="performance-value">1.2s</div>
+                                    <div class="performance-label">Avg. Retrieval Time</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="performance-stat">
+                                    <div class="performance-value">96%</div>
+                                    <div class="performance-label">Match Accuracy</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="retrievalPerformanceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-microchip metric-icon"></i>
+                            <h4 class="mb-0">Resource Utilization</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="resourceUtilizationChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Report Quality (15%) -->
+        <div class="criteria-section">
+            <div class="criteria-header d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Report Quality Metrics</h3>
+                <span class="criteria-weight">Weight: 15%</span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-file-alt metric-icon"></i>
+                            <h4 class="mb-0">Report Completeness</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="reportCompletenessChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-star metric-icon"></i>
+                            <h4 class="mb-0">User Satisfaction</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="userSatisfactionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Chart.js Global Configuration
+        Chart.defaults.color = '#8b949e';
+        Chart.defaults.borderColor = '#2d3238';
+        
+        // Initialize charts with sample data (replace with real data from your backend)
+        function initializeCharts() {
+            // Publishability Distribution Chart
+            new Chart(document.getElementById('publishabilityChart'), {
+                type: 'pie',
+                data: {
+                    labels: ['Publishable', 'Not Publishable'],
+                    datasets: [{
+                        data: [65, 35],
+                        backgroundColor: ['#198754', '#dc3545']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Conference Distribution Chart
+            new Chart(document.getElementById('conferenceChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['CVPR', 'NeurIPS', 'EMNLP', 'TMLR', 'KDD'],
+                    datasets: [{
+                        label: 'Papers',
+                        data: [30, 25, 20, 15, 10],
+                        backgroundColor: '#0dcaf0'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Publishability Metrics Chart
+            new Chart(document.getElementById('publishabilityMetricsChart'), {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                    datasets: [{
+                        label: 'Accuracy',
+                        data: [92, 93, 94, 95, 95],
+                        borderColor: '#0dcaf0'
+                    }, {
+                        label: 'F1 Score',
+                        data: [90, 91, 93, 94, 94],
+                        borderColor: '#0d6efd'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Quality Scores Distribution Chart
+            new Chart(document.getElementById('qualityScoresChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['Writing', 'Methodology', 'Innovation', 'Technical Depth', 'Validation', 'Coherence'],
+                    datasets: [{
+                        label: 'Average Scores',
+                        data: [85, 78, 82, 75, 80, 88],
+                        backgroundColor: 'rgba(13, 202, 240, 0.2)',
+                        borderColor: '#0dcaf0'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Retrieval Performance Chart
+            new Chart(document.getElementById('retrievalPerformanceChart'), {
+                type: 'line',
+                data: {
+                    labels: Array.from({length: 24}, (_, i) => `${i}:00`),
+                    datasets: [{
+                        label: 'Response Time (ms)',
+                        data: Array.from({length: 24}, () => Math.random() * 500 + 1000),
+                        borderColor: '#0dcaf0'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Resource Utilization Chart
+            new Chart(document.getElementById('resourceUtilizationChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['CPU', 'Memory', 'GPU', 'Disk I/O'],
+                    datasets: [{
+                        label: 'Usage %',
+                        data: [45, 60, 30, 25],
+                        backgroundColor: '#0dcaf0'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+
+            // Report Completeness Chart
+            new Chart(document.getElementById('reportCompletenessChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Complete', 'Partial', 'Incomplete'],
+                    datasets: [{
+                        data: [85, 12, 3],
+                        backgroundColor: ['#198754', '#ffc107', '#dc3545']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // User Satisfaction Chart
+            new Chart(document.getElementById('userSatisfactionChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Excellent', 'Good', 'Average', 'Poor'],
+                    datasets: [{
+                        label: 'User Ratings',
+                        data: [45, 35, 15, 5],
+                        backgroundColor: '#0dcaf0'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        // Initialize all charts when the page loads
+        document.addEventListener('DOMContentLoaded', initializeCharts);
+
+        // Function to update batch analysis metrics (call this when new batch data is available)
+        function updateBatchMetrics(data) {
+            document.getElementById('batchSize').textContent = data.totalPapers;
+            document.getElementById('avgProcessingTime').textContent = data.avgTime + 's';
+            document.getElementById('successRate').textContent = data.successRate + '%';
+            document.getElementById('batchTimestamp').textContent = 'Last updated: ' + data.timestamp;
+        }
+
+        // Sample batch update (replace with real data)
+        updateBatchMetrics({
+            totalPapers: 150,
+            avgTime: 2.3,
+            successRate: 98,
+            timestamp: new Date().toLocaleString()
+        });
+    </script>
+</body>
+</html> 

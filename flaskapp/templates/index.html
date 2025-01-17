@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSense - Academic Paper Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        :root {
+            --dark-bg: #1a1d20;
+            --darker-bg: #141619;
+            --border-color: #2d3238;
+        }
+        body {
+            background-color: var(--dark-bg) !important;
+        }
+        .navbar {
+            background-color: var(--darker-bg) !important;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .navbar-brand i {
+            color: #0dcaf0;
+        }
+        .upload-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            background-color: var(--darker-bg);
+            border: 1px solid var(--border-color);
+        }
+        .nav-tabs {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .nav-tabs .nav-link {
+            color: #6c757d;
+            border: none;
+            padding: 15px 25px;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: #0dcaf0;
+            border-bottom: 3px solid #0dcaf0;
+            background: none;
+        }
+        .tab-content {
+            padding: 30px 0;
+        }
+        .file-result {
+            border: 1px solid var(--border-color);
+            background-color: var(--dark-bg);
+        }
+        .file-header {
+            background-color: var(--darker-bg);
+        }
+        .file-header:hover {
+            background-color: var(--dark-bg);
+        }
+        .file-content {
+            background-color: var(--darker-bg);
+        }
+        .progress {
+            background-color: var(--dark-bg);
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #0dcaf0, #0d6efd);
+        }
+        .justification-text {
+            background-color: var(--dark-bg);
+            border-left: 4px solid #0dcaf0;
+        }
+        .summary-stats {
+            background-color: var(--dark-bg);
+            border: 1px solid var(--border-color);
+        }
+        .stat-value {
+            color: #0dcaf0;
+        }
+        #loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #results {
+            display: none;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .error-message {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        .result-card {
+            background: var(--darker-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .score-badge {
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        .score-high {
+            background: rgba(25, 135, 84, 0.2);
+            color: #198754;
+            border: 1px solid rgba(25, 135, 84, 0.3);
+        }
+        .score-low {
+            background: rgba(220, 53, 69, 0.2);
+            color: #dc3545;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+        .conference-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--dark-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+            color: var(--primary-color);
+        }
+        .justification-text {
+            background: var(--dark-bg);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid var(--primary-color);
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .file-result {
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--darker-bg);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .file-result:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .file-header {
+            padding: 15px 20px;
+            background: var(--dark-bg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+        .file-header:hover {
+            background: var(--darker-bg);
+        }
+        .file-content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            display: none;
+        }
+        .summary-stats {
+            background: var(--dark-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+        }
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            color: #8b949e;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        #progressContainer {
+            display: none;
+            margin: 20px 0;
+            text-align: center;
+        }
+        #progressText {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .log-container {
+            display: none;
+        }
+        .progress {
+            height: 8px;
+            margin: 20px 0;
+            border-radius: 4px;
+            background-color: #e9ecef;
+            overflow: hidden;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+            transition: width 0.8s ease-in-out;
+            border-radius: 4px;
+            background-size: 200% 100%;
+            animation: gradientMove 2s linear infinite;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-brain me-2"></i>
+                ScholarSense
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/performance">
+                            <i class="fas fa-chart-line me-1"></i> Performance Metrics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                            <i class="fas fa-info-circle me-1"></i> About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title">About ScholarSense</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>ScholarSense is an intelligent academic paper analysis tool that leverages AI to evaluate research papers and provide actionable insights for publication.</p>
+                    <h6 class="mt-4">Key Features:</h6>
+                    <ul>
+                        <li>AI-Powered Publishability Analysis</li>
+                        <li>Smart Conference Matching</li>
+                        <li>In-depth Quality Assessment</li>
+                        <li>Batch Processing Capabilities</li>
+                        <li>Real-time Progress Tracking</li>
+                    </ul>
+                    <p class="mt-4 text-muted">Empowering researchers with data-driven publication insights.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="upload-container">
+            <h2 class="text-center mb-4">Academic Paper Analysis</h2>
+            
+            {% if error %}
+            <div class="error-message">
+                <strong>Error:</strong> {{ error }}
+                <p class="mt-2 mb-0">Please make sure all required model files are present in the models directory.</p>
+            </div>
+            {% endif %}
+            
+            <!-- Tabs -->
+            <ul class="nav nav-tabs" id="analysisTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pdf-tab" data-bs-toggle="tab" data-bs-target="#pdf" type="button" role="tab">
+                        <i class="fas fa-file-pdf me-2"></i>Single PDF Analysis
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="drive-tab" data-bs-toggle="tab" data-bs-target="#drive" type="button" role="tab">
+                        <i class="fab fa-google-drive me-2"></i>Batch Analysis
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="analysisTabContent">
+                <!-- PDF Upload Tab -->
+                <div class="tab-pane fade show active" id="pdf" role="tabpanel">
+                    <form id="uploadForm" class="mb-4">
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Upload Academic Paper (PDF)</label>
+                            <input type="file" class="form-control" id="file" name="file" accept=".pdf">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-analyze me-2"></i>Analyze Paper
+                        </button>
+                    </form>
+                    
+                    <!-- Single File Results -->
+                    <div id="singleResult" class="result-card" style="display: none;">
+                        <div class="result-header">
+                            <h4 class="mb-0">Analysis Results</h4>
+                            <span id="resultScore" class="score-badge"></span>
+                        </div>
+                        <div id="resultDetails">
+                            <!-- Single file results will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Drive Tab -->
+                <div class="tab-pane fade" id="drive" role="tabpanel">
+                    <form id="driveForm">
+                        <div class="mb-3">
+                            <label for="driveLink" class="form-label">Google Drive Folder Link</label>
+                            <input type="text" class="form-control" id="driveLink" name="drive_link" 
+                                   placeholder="Paste your Google Drive folder link here">
+                            <div class="form-text">The folder should contain PDF files for analysis.</div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="fas fa-cloud-download-alt me-2"></i>Analyze All Documents
+                        </button>
+                    </form>
+
+                    <!-- Progress Container -->
+                    <div id="progressContainer" class="mt-4" style="display: none;">
+                        <h5>Processing Progress</h5>
+                        <div class="progress">
+                            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <div id="progressText" class="text-center mb-3">0/0 files processed</div>
+                    </div>
+                    
+                    <!-- Batch Results -->
+                    <div id="batchResults" class="result-card mt-4" style="display: none;">
+                        <div class="result-header">
+                            <h4 class="mb-0">Batch Analysis Results</h4>
+                        </div>
+                        <div id="summaryStats" class="summary-stats">
+                            <!-- Summary statistics will be populated here -->
+                        </div>
+                        <div id="fileResults">
+                            <!-- Multiple file results will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Analyzing documents...</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize Socket.IO
+        const socket = io();
+        let totalFiles = 0;
+        let processedFiles = 0;
+
+        // Handle progress updates
+        socket.on('progress_update', function(data) {
+            const progressContainer = document.getElementById('progressContainer');
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const fileResults = document.getElementById('fileResults');
+            const batchResults = document.getElementById('batchResults');
+            
+            // Show progress container for batch processing
+            if (data.total_files) {
+                progressContainer.style.display = 'block';
+                batchResults.style.display = 'block';
+            }
+            
+            // Simulate smooth progress
+            if (data.total_files) {
+                totalFiles = data.total_files;
+                // Start with 10% progress when we know total files
+                progressBar.style.width = '10%';
+            }
+            
+            if (data.processed_files) {
+                processedFiles = data.processed_files;
+                // Calculate progress with 10% lead, but slow down for last few files
+                let baseProgress;
+                if (processedFiles >= totalFiles - 2) {
+                    // Slow down progress for last 2 files
+                    const remainingFiles = totalFiles - processedFiles;
+                    baseProgress = ((processedFiles / totalFiles) * 85) + 
+                                 ((1 - (remainingFiles / 2)) * 10); // Gradually close the gap
+                } else {
+                    // Stay 10% ahead until near the end
+                    baseProgress = Math.min(90, ((processedFiles / totalFiles) * 85) + 10);
+                }
+                
+                progressBar.style.width = baseProgress + '%';
+                progressText.textContent = `Processing file ${processedFiles} of ${totalFiles}`;
+            }
+            
+            // If we have file results, create and append the result card
+            if (data.filename && data.score !== undefined) {
+                const score = data.score;
+                const fileResult = document.createElement('div');
+                fileResult.className = 'file-result';
+                fileResult.innerHTML = `
+                    <div class="file-header" onclick="toggleFileContent(this)">
+                        <div>
+                            <strong>${data.filename}</strong>
+                            <span class="score-badge ${score >= 70 ? 'score-high' : 'score-low'} ms-2">
+                                Score: ${score.toFixed(1)}%
+                            </span>
+                        </div>
+                        <i class="fas fa-chevron-down icon"></i>
+                    </div>
+                    <div class="file-content">
+                        <div class="mt-3">
+                            <p><strong>Publishable:</strong> ${data.publishable ? 'Yes' : 'No'}</p>
+                            ${data.conference ? `
+                                <div class="mt-3">
+                                    <strong>Recommended Conference:</strong>
+                                    <div class="conference-tag">${data.conference}</div>
+                                </div>
+                            ` : ''}
+                            ${data.justification ? `
+                                <div class="justification-text mt-3">
+                                    <strong>Justification:</strong><br>
+                                    ${data.justification}
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+                fileResults.insertBefore(fileResult, fileResults.firstChild);
+            }
+            
+            // If processing is complete
+            if (data.complete) {
+                // Smoothly animate to 100%
+                progressBar.style.transition = 'width 1.5s ease-out';
+                progressBar.style.width = '100%';
+                progressText.textContent = `Completed processing ${totalFiles} files`;
+                document.getElementById('loading').style.display = 'none';
+            }
+        });
+
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            const fileInput = document.getElementById('file');
+            formData.append('file', fileInput.files[0]);
+            
+            // Reset single result display
+            document.getElementById('singleResult').style.display = 'none';
+            document.getElementById('resultScore').textContent = '';
+            document.getElementById('resultDetails').innerHTML = '';
+            
+            await submitAnalysis('/upload', formData, false);
+        });
+
+        document.getElementById('driveForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append('drive_link', document.getElementById('driveLink').value);
+            
+            // Reset batch processing displays
+            document.getElementById('progressContainer').style.display = 'none';
+            document.getElementById('progressBar').style.width = '0%';
+            document.getElementById('progressText').textContent = '0/0 files processed';
+            document.getElementById('fileResults').innerHTML = '';
+            document.getElementById('batchResults').style.display = 'none';
+            totalFiles = 0;
+            processedFiles = 0;
+            
+            await submitAnalysis('/analyze-drive', formData, true);
+        });
+
+        function toggleFileContent(element) {
+            const content = element.nextElementSibling;
+            const isActive = element.classList.contains('active');
+            
+            element.classList.toggle('active');
+            content.style.display = isActive ? 'none' : 'block';
+        }
+
+        function createResultContent(result) {
+            const score = result.publishability_score * 100;
+            return `
+                <div class="mt-3">
+                    <p><strong>Publishable:</strong> ${result.publishable ? 'Yes' : 'No'}</p>
+                    ${result.conference !== 'NA' ? `
+                        <div class="mt-3">
+                            <strong>Recommended Conference:</strong>
+                            <div class="conference-tag">${result.conference}</div>
+                        </div>
+                    ` : ''}
+                    ${result.justification !== 'NA' ? `
+                        <div class="justification-text">
+                            <strong>Justification:</strong><br>
+                            ${result.justification}
+                        </div>
+                    ` : ''}
+                    <p class="text-muted mt-3"><small>Processing Time: ${result.processing_time.toFixed(2)}s</small></p>
+                </div>
+            `;
+        }
+
+        function createSummaryStats(results) {
+            const totalFiles = results.length;
+            const publishable = results.filter(r => r.publishable).length;
+            const avgScore = results.reduce((acc, r) => acc + r.publishability_score, 0) / totalFiles * 100;
+            
+            return `
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <div class="stat-value">${totalFiles}</div>
+                            <div class="stat-label">Total Files</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <div class="stat-value">${publishable}</div>
+                            <div class="stat-label">Publishable</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <div class="stat-value">${avgScore.toFixed(1)}%</div>
+                            <div class="stat-label">Average Score</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function submitAnalysis(url, formData, isBatch) {
+            const loading = document.getElementById('loading');
+            const singleResult = document.getElementById('singleResult');
+            const batchResults = document.getElementById('batchResults');
+            
+            try {
+                loading.style.display = 'block';
+                
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    if (isBatch) {
+                        // Handle batch results
+                        document.getElementById('summaryStats').innerHTML = createSummaryStats(data.results);
+                        
+                        // Create collapsible results for each file
+                        const fileResultsHtml = data.results.map((result, index) => `
+                            <div class="file-result">
+                                <div class="file-header" onclick="toggleFileContent(this)">
+                                    <div>
+                                        <strong>${result.pdfname}</strong>
+                                        <span class="score-badge ${result.publishability_score >= 0.7 ? 'score-high' : 'score-low'} ms-2">
+                                            Score: ${(result.publishability_score * 100).toFixed(1)}%
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-chevron-down icon"></i>
+                                </div>
+                                <div class="file-content">
+                                    ${createResultContent(result)}
+                                </div>
+                            </div>
+                        `).join('');
+                        
+                        document.getElementById('fileResults').innerHTML = fileResultsHtml;
+                        batchResults.style.display = 'block';
+                    } else {
+                        // Handle single file result
+                        const score = data.results.publishability_score * 100;
+                        document.getElementById('resultScore').textContent = `Score: ${score.toFixed(1)}%`;
+                        document.getElementById('resultScore').className = `score-badge ${score >= 70 ? 'score-high' : 'score-low'}`;
+                        document.getElementById('resultDetails').innerHTML = createResultContent(data.results);
+                        singleResult.style.display = 'block';
+                    }
+                } else {
+                    throw new Error(data.error || 'Analysis failed');
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html> 
